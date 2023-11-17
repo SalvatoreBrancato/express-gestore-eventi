@@ -7,31 +7,17 @@
         "id": 1
     },
     {
-        "title": "titolo",
+        "title": "prova",
         "description": "desccc",
         "date": "fasdfas",
         "maxSeats": "sad",
         "id": 2
     },
     {
-        "title": "titolo",
+        "title": "titoloooo",
         "description": "desccc",
         "date": "fasdfas",
         "maxSeats": "sad",
         "id": 3
-    },
-    {
-        "title": "titolo",
-        "description": "desccc",
-        "date": "fasdfas",
-        "maxSeats": "sad",
-        "id": 4
-    },
-    {
-        "title": "titolo",
-        "description": "desccc",
-        "date": "fasdfas",
-        "maxSeats": "sad",
-        "id": 5
     }
 ]

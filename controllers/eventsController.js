@@ -2,10 +2,18 @@ const Event = require('../models/event')
 const eventsData = require('../db/eventiDb'); // Importa i dati JSON come oggetto
 
 function index(req, res){
-    //console.log(Event.findAll())
-    //let events = Event.findAll(); // Recupera tutti gli eventi
-
-    res.send(eventsData);
+    const { title, description } = req.query;
+    console.log(title)
+    if(title){
+        const filtroTitolo = eventsData.find((evento) => evento.title === title);
+        res.send(filtroTitolo)
+    } else if(description){
+        const filtroDescrizione = eventsData.find((evento) => evento.description === description);
+        res.send(filtroDescrizione)
+    } else {
+        res.send(eventsData);
+    }
+    
 }
 
 function show(req, res){

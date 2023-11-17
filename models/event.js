@@ -10,9 +10,9 @@ class Event {
     this.maxSeats = maxSeats;
   }
 
-  static findAll() {
-    //return this.find({});
-  }
+//   static findAll() {
+//     return this.find({});
+//   }
 
   static read() {
     // Leggi il file JSON e analizzalo in un array di eventi
@@ -23,7 +23,17 @@ class Event {
   static save(event) {
     // Leggi gli eventi esistenti, aggiungi il nuovo evento e salva i dati aggiornati
     const events = Event.read();
-    event.id = 1;
+    console.log(events)
+
+    // Restituisce l'elemento con l'id più alto
+    let idMaggiore = 0;
+    for (const elemento of events) {
+        if ( elemento.id > idMaggiore) {
+            idMaggiore = elemento.id;
+        }
+    }
+    //console.log(idMaggiore)
+    event.id = idMaggiore + 1;
     events.push(event);
 
     const filePath = path.join(__dirname, '../db/eventiDb.json');

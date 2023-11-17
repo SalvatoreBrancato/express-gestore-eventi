@@ -9,6 +9,8 @@ const eventsController = require('../controllers/eventsController');
 
 //index
 router.get('/index', eventsController.index);
+//show
+router.get('/show/:id', eventsController.show)
 //store
 router.post('/store', eventsController.store);
 //update

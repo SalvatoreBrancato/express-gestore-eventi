@@ -11,5 +11,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/events', eventsRouter);
 
 app.listen(process.env.PORT || 8080, ()=>{
-    console.log(`http://localhost${process.env.PORT}`)
+    console.log(`http://localhost:${process.env.PORT}/events`)
 })

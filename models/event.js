@@ -22,19 +22,24 @@ class Event {
 
   static save(event) {
     // Leggi gli eventi esistenti, aggiungi il nuovo evento e salva i dati aggiornati
-    const events = Event.read();
+    let events = Event.read();
     console.log(events)
 
-    // Restituisce l'elemento con l'id più alto
-    let idMaggiore = 0;
-    for (const elemento of events) {
-        if ( elemento.id > idMaggiore) {
-            idMaggiore = elemento.id;
-        }
+    if(!event.id) {
+      // Restituisce l'elemento con l'id più alto
+      let idMaggiore = 0;
+      for (const elemento of events) {
+          if ( elemento.id > idMaggiore) {
+              idMaggiore = elemento.id;
+          }
+      }
+      //console.log(idMaggiore)
+      event.id = idMaggiore + 1;
+      events.push(event);
+    } else {
+      events = events.map(elm => elm.id == event.id ? event : elm)
     }
-    //console.log(idMaggiore)
-    event.id = idMaggiore + 1;
-    events.push(event);
+
 
     const filePath = path.join(__dirname, '../db/eventiDb.json');
     const updatedData = JSON.stringify(events);

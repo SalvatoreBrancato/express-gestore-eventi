@@ -40,7 +40,18 @@ function store(req, res){
 }
 
 function update(req, res){
+    const eventToUpdate = eventsData.find(event => event.id == req.params.id);
 
+    if(!eventToUpdate) throw new Error("non esiste l'evento");
+    
+    const eventUpdated = {
+        ...eventToUpdate,
+        ...req.body
+    }
+
+    const eventSaved = Event.save(eventUpdated);
+    
+    res.send(eventSaved)
 }
 
 module.exports = {

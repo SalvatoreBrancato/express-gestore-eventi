@@ -1,9 +1,9 @@
 [
     {
-        "title": "titolo",
-        "description": "desccc",
-        "date": "fasdfas",
-        "maxSeats": "sad",
+        "title": "titolooooModificato",
+        "description": "desccdsasdsa",
+        "date": "fasdfadasdsas",
+        "maxSeats": "ssadasdasad",
         "id": 1
     },
     {
@@ -19,5 +19,12 @@
         "date": "fasdfas",
         "maxSeats": "sad",
         "id": 3
+    },
+    {
+        "title": "nuovo elemento",
+        "description": "desccdsasdsa",
+        "date": "fasdfadasdsas",
+        "maxSeats": "ssadasdasad",
+        "id": 4
     }
 ]

@@ -14,7 +14,7 @@ router.get('/show/:id', eventsController.show)
 //store
 router.post('/store', eventsController.store);
 //update
-router.put('/:event', eventsController.update);
+router.put('/update/:id', eventsController.update);
 
 
 module.exports = router
